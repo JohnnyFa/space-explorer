@@ -19,6 +19,3 @@ Space Explorer is an innovative mobile application that allows users to embark o
 - ⚡ Asynchronous Programming: Leverage coroutines to handle asynchronous operations efficiently.
 
 Join us on this incredible cosmic journey and experience the wonders of the universe at your fingertips. Space Explorer brings the mysteries of space right to your mobile device! 🌟
-
----
-Feel free to copy this README content and customize it further to suit your project's specific needs. Enjoy developing your app! 🚀✨
