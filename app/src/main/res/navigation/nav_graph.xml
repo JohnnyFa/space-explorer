@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/pictureOfDayFragment">
+
+    <fragment
+        android:id="@+id/pictureOfDayFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayFragment"
+        android:label="Picture of the Day"
+        tools:layout="@layout/fragment_picture_day" />
+
+    <fragment
+        android:id="@+id/marsFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.feature.marsphotos.MarsRoverPhotosFragment"
+        android:label="Mars"
+        tools:layout="@layout/fragment_mars_rover_photos" />
+
+    <fragment
+        android:id="@+id/earthFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.feature.earth.EarthFragment"
+        android:label="Earth"
+        tools:layout="@layout/fragment_earth" />
+
+    <fragment
+        android:id="@+id/asteroidsFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.feature.asteroids.AsteroidsFragment"
+        android:label="Asteroids"
+        tools:layout="@layout/fragment_asteroids" />
+</navigation>

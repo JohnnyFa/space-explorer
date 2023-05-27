@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_picture_of_day"
+        android:title="Foto do dia" />
+
+    <item
+        android:id="@+id/action_mars"
+        android:title="Marte" />
+
+    <item
+        android:id="@+id/action_earth"
+        android:title="Terra" />
+
+    <item
+        android:id="@+id/action_asteroids"
+        android:title="Aesteroides" />
+</menu>
