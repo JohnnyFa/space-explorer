@@ -2,7 +2,6 @@ package com.johnny.fagundes.spaceexplorer.feature.pictureday
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,7 @@ import com.johnny.fagundes.spaceexplorer.feature.utils.ImageUtils
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import timber.log.Timber
 
 class PictureDayFragment : Fragment() {
 
@@ -48,12 +48,12 @@ class PictureDayFragment : Fragment() {
                         setupUI(true)
                     }
                     is PictureDayViewModel.HomeUIState.Success -> {
-                        Log.d(TAG, "data is collected successfully.")
+                        Timber.tag(TAG).d("data is collected successfully.")
                         setPictureDay(state.picture)
                         setupUI(false)
                     }
                     is PictureDayViewModel.HomeUIState.Error -> {
-                        Log.d(TAG, "data is not collected, ERROR.")
+                        Timber.tag(TAG).d("data is not collected, ERROR.")
                         setupError(state.error)
                     }
                 }

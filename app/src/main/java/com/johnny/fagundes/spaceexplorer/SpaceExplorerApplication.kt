@@ -6,6 +6,7 @@ import com.johnny.fagundes.spaceexplorer.di.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
+import timber.log.Timber
 
 class SpaceExplorerApplication : Application() {
     override fun onCreate() {
@@ -15,6 +16,14 @@ class SpaceExplorerApplication : Application() {
             androidLogger()
             androidContext(this@SpaceExplorerApplication)
             modules(listOf(appModule, networkModule))
+        }
+
+        setupDebug()
+    }
+
+    private fun setupDebug() {
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
         }
     }
 }

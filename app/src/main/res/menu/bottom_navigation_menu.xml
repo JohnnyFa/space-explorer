@@ -3,17 +3,21 @@
 
     <item
         android:id="@+id/action_picture_of_day"
-        android:title="Foto do dia" />
+        android:icon="@drawable/ic_camera"
+        android:title="@string/picture" />
 
     <item
         android:id="@+id/action_mars"
-        android:title="Marte" />
+        android:icon="@drawable/ic_mars"
+        android:title="@string/mars" />
 
     <item
         android:id="@+id/action_earth"
-        android:title="Terra" />
+        android:icon="@drawable/ic_earth"
+        android:title="@string/earth" />
 
     <item
         android:id="@+id/action_asteroids"
-        android:title="Aesteroides" />
+        android:icon="@drawable/ic_asteroids"
+        android:title="@string/asteroids" />
 </menu>

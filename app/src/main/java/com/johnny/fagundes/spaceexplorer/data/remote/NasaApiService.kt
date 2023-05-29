@@ -9,12 +9,12 @@ import retrofit2.http.Query
 
 interface NasaApiService {
     @GET("planetary/apod")
-    suspend fun getPicture(@Query("api_key") apiKey: String = BuildConfig.API_KEY): PictureDayResponse
+    suspend fun getPicture(): PictureDayResponse
 
     @GET("mars-photos/api/v1/rovers/{roverName}/photos")
     suspend fun getMarsPhotos(
         @Path("roverName") roverName: String,
-        @Path("page") page: String,
-        @Query("api_key") apiKey: String = BuildConfig.API_KEY
+        @Query("sol") sol: Int = 1000,
+        @Query("page") page: String
     ): MarsRoverPhotosResponse
 }

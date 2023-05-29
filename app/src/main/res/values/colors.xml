@@ -8,6 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="nasa_button_background_color">#FF0000</color>
-    <color name="nasa_button_text_color">#FFFFFF</color>
+    <color name="nasa_button_background_color">#B0B0B0</color>
+    <color name="nasa_button_text_color">#FF4B3E</color>
+
+    <color name="selected_text_color">#FF4B3E</color>
+    <color name="unselected_text_color">#B0B0B0</color>
+    <color name="selected_icon_color">#FF4B3E</color>
+    <color name="unselected_icon_color">#B0B0B0</color>
 </resources>

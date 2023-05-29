@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.SpaceExplorer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
@@ -12,12 +13,5 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-    </style>
-
-    <style name="NASAButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/nasa_button_background</item>
-        <item name="android:textColor">@color/nasa_button_text_color</item>
-        <item name="android:textSize">16sp</item>
-        <!-- Add more attributes as per your requirements -->
     </style>
 </resources>
