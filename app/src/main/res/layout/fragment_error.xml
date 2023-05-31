@@ -19,7 +19,7 @@
             android:gravity="center"
             android:padding="8dp"
             android:text="@string/error_message"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/btn_retry"
             app:layout_constraintEnd_toEndOf="parent"

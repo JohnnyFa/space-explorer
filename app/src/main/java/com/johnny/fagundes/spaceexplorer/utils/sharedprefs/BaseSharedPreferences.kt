@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.utils.sharedprefs
+package com.johnny.fagundes.spaceexplorer.utils.sharedprefs
 
 import android.content.SharedPreferences
 import com.google.gson.Gson

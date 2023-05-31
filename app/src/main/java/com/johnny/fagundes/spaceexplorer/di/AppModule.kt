@@ -7,8 +7,8 @@ import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepository
 import com.johnny.fagundes.spaceexplorer.feature.MainViewModel
 import com.johnny.fagundes.spaceexplorer.feature.marsphotos.MarsRoverPhotosViewModel
 import com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayViewModel
-import com.johnny.fagundes.spaceexplorer.feature.utils.sharedprefs.BaseSharedPreferences
-import com.johnny.fagundes.spaceexplorer.feature.utils.sharedprefs.NasaSharedPreferences
+import com.johnny.fagundes.spaceexplorer.utils.sharedprefs.BaseSharedPreferences
+import com.johnny.fagundes.spaceexplorer.utils.sharedprefs.NasaSharedPreferences
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module

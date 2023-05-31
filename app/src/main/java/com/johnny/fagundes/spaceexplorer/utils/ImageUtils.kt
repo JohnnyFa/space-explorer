@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.utils
+package com.johnny.fagundes.spaceexplorer.utils
 
 import android.content.Context
 import android.widget.ImageView
