@@ -1,6 +1,5 @@
 package com.johnny.fagundes.spaceexplorer.data.remote
 
-import com.johnny.fagundes.spaceexplorer.BuildConfig
 import com.johnny.fagundes.spaceexplorer.domain.model.MarsRoverPhotosResponse
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
 import retrofit2.http.GET

@@ -2,6 +2,7 @@ package com.johnny.fagundes.spaceexplorer.data.impl
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.johnny.fagundes.spaceexplorer.data.remote.NasaApiService
+import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepositoryImpl
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
 import io.mockk.coEvery
 import io.mockk.mockk
