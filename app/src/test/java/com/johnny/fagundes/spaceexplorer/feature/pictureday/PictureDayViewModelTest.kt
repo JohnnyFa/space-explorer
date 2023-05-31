@@ -2,7 +2,7 @@ package com.johnny.fagundes.spaceexplorer.feature.pictureday
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
-import com.johnny.fagundes.spaceexplorer.domain.repository.NasaRepository
+import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepository
 import com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayViewModel
 import io.mockk.coEvery
 import io.mockk.mockk

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.johnny.fagundes.spaceexplorer.R
+import com.johnny.fagundes.spaceexplorer.data.remote.RetryCallback
 import com.johnny.fagundes.spaceexplorer.databinding.ActivityMainBinding
 import com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel

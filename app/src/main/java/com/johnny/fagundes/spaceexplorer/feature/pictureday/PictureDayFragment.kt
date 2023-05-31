@@ -7,15 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
+import com.johnny.fagundes.spaceexplorer.R
+import com.johnny.fagundes.spaceexplorer.data.remote.RetryCallback
 import com.johnny.fagundes.spaceexplorer.databinding.FragmentPictureDayBinding
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
+import com.johnny.fagundes.spaceexplorer.feature.error.ErrorFragment
 import com.johnny.fagundes.spaceexplorer.feature.utils.ImageUtils
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
 
-class PictureDayFragment : Fragment() {
+class PictureDayFragment : Fragment(), RetryCallback {
 
     private lateinit var pictureDayJob: Job
 
@@ -54,15 +57,22 @@ class PictureDayFragment : Fragment() {
                     }
                     is PictureDayViewModel.HomeUIState.Error -> {
                         Timber.tag(TAG).d("data is not collected, ERROR.")
-                        setupError(state.error)
+                        showError(state.error)
+                        setupUI(false)
                     }
                 }
             }
         }
     }
 
-    private fun setupError(error: Throwable) {
-        println(error)
+    private fun showError(error: Throwable) {
+        println(error.message)
+        val fragmentManager = childFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val errorFragment = ErrorFragment()
+
+        fragmentTransaction.replace(R.id.errorFragment, errorFragment)
+        fragmentTransaction.commit()
     }
 
     private fun setupUI(isLoading: Boolean) {
@@ -76,6 +86,17 @@ class PictureDayFragment : Fragment() {
         )
         binding.textViewTitle.text = picture.title
         binding.textViewExplanation.text = picture.explanation
+    }
+
+    override fun retry() {
+        viewModel.fetchData()
+        val fragmentManager = childFragmentManager
+        val errorFragment = fragmentManager.findFragmentById(R.id.errorFragment)
+        errorFragment?.let {
+            fragmentManager.beginTransaction()
+                .remove(it)
+                .commit()
+        }
     }
 
     override fun onDestroyView() {

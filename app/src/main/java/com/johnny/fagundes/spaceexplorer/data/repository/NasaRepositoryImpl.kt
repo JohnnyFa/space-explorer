@@ -1,11 +1,13 @@
-package com.johnny.fagundes.spaceexplorer.data.impl
+package com.johnny.fagundes.spaceexplorer.data.repository
 
 import com.johnny.fagundes.spaceexplorer.data.remote.NasaApiService
 import com.johnny.fagundes.spaceexplorer.domain.model.MarsRoverPhotosResponse
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
-import com.johnny.fagundes.spaceexplorer.domain.repository.NasaRepository
+import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepository
 
-class NasaRepositoryImpl(private val nasaApiService: NasaApiService) : NasaRepository {
+class NasaRepositoryImpl(
+    private val nasaApiService: NasaApiService
+) : NasaRepository {
 
     private val maxSol = 1000
     override suspend fun getPictureDay(): PictureDayResponse {
@@ -13,6 +15,6 @@ class NasaRepositoryImpl(private val nasaApiService: NasaApiService) : NasaRepos
     }
 
     override suspend fun getMarsPhotos(rover: String, page: Int): MarsRoverPhotosResponse {
-        return nasaApiService.getMarsPhotos(rover, maxSol,page.toString())
+        return nasaApiService.getMarsPhotos(rover, maxSol, page.toString())
     }
 }

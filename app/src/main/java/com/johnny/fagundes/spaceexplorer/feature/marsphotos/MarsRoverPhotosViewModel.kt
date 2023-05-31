@@ -3,7 +3,7 @@ package com.johnny.fagundes.spaceexplorer.feature.marsphotos
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.johnny.fagundes.spaceexplorer.domain.model.MarsRoverPhotosResponse
-import com.johnny.fagundes.spaceexplorer.domain.repository.NasaRepository
+import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

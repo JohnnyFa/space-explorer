@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.domain.repository
+package com.johnny.fagundes.spaceexplorer.data.repository
 
 import com.johnny.fagundes.spaceexplorer.domain.model.MarsRoverPhotosResponse
 import com.johnny.fagundes.spaceexplorer.domain.model.PictureDayResponse
