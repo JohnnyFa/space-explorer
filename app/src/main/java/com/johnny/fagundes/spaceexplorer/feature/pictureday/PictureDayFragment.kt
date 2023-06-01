@@ -90,7 +90,7 @@ class PictureDayFragment : Fragment(), RetryCallback {
 
     private fun setupUI(isLoading: Boolean) {
         if (isLoading) {
-            binding.loadingScreen.showLoading("space_animation.json")
+            binding.loadingScreen.showLoading("space_man_white.json")
         } else {
             binding.loadingScreen.hideLoading()
         }

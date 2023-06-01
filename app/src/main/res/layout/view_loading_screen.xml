@@ -24,13 +24,4 @@
         android:textSize="18sp"
         android:fontFamily="sans-serif-smallcaps" />
 
-    <com.google.android.material.progressindicator.CircularProgressIndicator
-        android:id="@+id/loadingProgress"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:indeterminateTint="@android:color/white"
-        app:indicatorSize="48dp"
-        app:trackThickness="4dp" />
-
 </FrameLayout>

@@ -19,13 +19,11 @@ class LoadingScreenView @JvmOverloads constructor(
 
     private val loadingAnimationView: LottieAnimationView
     private val loadingTextView: MaterialTextView
-    private val loadingProgress: CircularProgressIndicator
 
     init {
         LayoutInflater.from(context).inflate(R.layout.view_loading_screen, this, true)
         loadingAnimationView = findViewById(R.id.loadingAnimation)
         loadingTextView = findViewById(R.id.loadingText)
-        loadingProgress = findViewById(R.id.loadingProgress)
     }
 
     fun showLoading(animation: String) {
