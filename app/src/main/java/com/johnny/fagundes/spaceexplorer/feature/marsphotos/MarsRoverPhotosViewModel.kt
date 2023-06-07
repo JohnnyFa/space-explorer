@@ -18,8 +18,8 @@ class MarsRoverPhotosViewModel(private val nasaRepository: NasaRepository) : Vie
         _marsPhotosState.value = HomeUIState.Loading
         viewModelScope.launch {
             try {
-                val picture = nasaRepository.getMarsPhotos("curiosity", 1)
-                _marsPhotosState.value = HomeUIState.Success(picture)
+                val mars = nasaRepository.getMarsPhotos("curiosity", 1)
+                _marsPhotosState.value = HomeUIState.Success(mars)
             } catch (e: Exception) {
                 _marsPhotosState.value = HomeUIState.Error(e)
             }
@@ -29,7 +29,7 @@ class MarsRoverPhotosViewModel(private val nasaRepository: NasaRepository) : Vie
     sealed class HomeUIState {
         object Initial : HomeUIState()
         object Loading : HomeUIState()
-        data class Success(val picture: MarsRoverPhotosResponse) : HomeUIState()
+        data class Success(val marsPhotos: MarsRoverPhotosResponse) : HomeUIState()
         data class Error(val error: Throwable) : HomeUIState()
     }
 }

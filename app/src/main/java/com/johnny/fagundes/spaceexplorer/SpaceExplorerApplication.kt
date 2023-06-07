@@ -11,7 +11,6 @@ import timber.log.Timber
 class SpaceExplorerApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        // Start Koin
         startKoin {
             androidLogger()
             androidContext(this@SpaceExplorerApplication)
