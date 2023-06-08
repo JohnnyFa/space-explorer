@@ -11,7 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.test.StandardTestDispatcher
-import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
@@ -54,6 +53,22 @@ class PictureDayViewModelTest {
 
         coEvery { nasaSharedPreferences.savePicture(getMockedValueOfToday()) } returns Unit
         coEvery { repository.getPictureDay() } returns picture
+        viewModel.fetchData()
+        advanceUntilIdle()
+        assertEquals(expectedState, viewModel.pictureDayState.value)
+    }
+
+    @Test
+    fun `verify if when fetchData is called with error, the return is Error`() = runTest {
+        val errorExpected = Exception("This is an expected error")
+
+        val expectedState =
+            PictureDayViewModel.HomeUIState.Error(errorExpected)
+
+        val viewModel = instantiateViewModel()
+
+        coEvery { nasaSharedPreferences.savePicture(getMockedValueOfToday()) } returns Unit
+        coEvery { repository.getPictureDay() } throws errorExpected
         viewModel.fetchData()
         advanceUntilIdle()
         assertEquals(expectedState, viewModel.pictureDayState.value)

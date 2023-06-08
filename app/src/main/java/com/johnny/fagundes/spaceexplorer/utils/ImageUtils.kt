@@ -17,7 +17,7 @@ object ImageUtils {
     fun loadImageUrl(imageView: ImageView, imageUrl: String) {
         Glide.with(imageView)
             .load(imageUrl)
-            .override(500, 500)
+            .override(200)
             .into(imageView)
     }
 }

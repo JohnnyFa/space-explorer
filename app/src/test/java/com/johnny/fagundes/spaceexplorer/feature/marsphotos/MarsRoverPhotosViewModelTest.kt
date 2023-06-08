@@ -55,6 +55,20 @@ class MarsRoverPhotosViewModelTest {
         TestCase.assertEquals(expectedState, viewModel.marsPhotos.value)
     }
 
+    @Test
+    fun `verify if when fetchData is called with error, the return is Error`() = runTest {
+        val expectedError = Exception("This is an expected error")
+
+        val expectedState = MarsRoverPhotosViewModel.HomeUIState.Error(expectedError)
+
+        val viewModel = instantiateViewModel()
+
+        coEvery { repository.getMarsPhotos("curiosity", 1) } throws expectedError
+        viewModel.fetchData()
+        advanceUntilIdle()
+        TestCase.assertEquals(expectedState, viewModel.marsPhotos.value)
+    }
+
     private fun instantiateViewModel(): MarsRoverPhotosViewModel {
         return MarsRoverPhotosViewModel(repository)
     }

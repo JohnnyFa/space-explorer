@@ -34,11 +34,12 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             app:loadImageUrl="@{photo.img_src}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewSol" />
+            app:layout_constraintTop_toBottomOf="@id/textViewSol"
+            android:importantForAccessibility="no" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
