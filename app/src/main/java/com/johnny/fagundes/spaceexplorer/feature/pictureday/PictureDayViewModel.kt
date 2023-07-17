@@ -23,22 +23,22 @@ class PictureDayViewModel(
         val savedPicData = getSavedPicture()
         savedPicData?.let {
             if (savedPicData.isToday()) {
-                _pictureDayState.value = HomeUIState.Success(savedPicData)
+                _pictureDayState.tryEmit(HomeUIState.Success(savedPicData))
                 return
             } else fetchData()
         } ?: fetchData()
     }
 
     fun fetchData() {
-        _pictureDayState.value = HomeUIState.Loading
+        _pictureDayState.tryEmit(HomeUIState.Loading)
 
         viewModelScope.launch {
             try {
                 val picture = nasaRepository.getPictureDay()
                 savePicture(picture)
-                _pictureDayState.value = HomeUIState.Success(picture)
+                _pictureDayState.tryEmit(HomeUIState.Success(picture))
             } catch (e: Exception) {
-                _pictureDayState.value = HomeUIState.Error(e)
+                _pictureDayState.tryEmit(HomeUIState.Error(e))
             }
         }
     }

@@ -15,13 +15,13 @@ class MarsRoverPhotosViewModel(private val nasaRepository: NasaRepository) : Vie
     val marsPhotos: StateFlow<HomeUIState> get() = _marsPhotosState
 
     fun fetchData() {
-        _marsPhotosState.value = HomeUIState.Loading
+        _marsPhotosState.tryEmit(HomeUIState.Loading)
         viewModelScope.launch {
             try {
                 val mars = nasaRepository.getMarsPhotos("curiosity", 1)
-                _marsPhotosState.value = HomeUIState.Success(mars)
+                _marsPhotosState.tryEmit(HomeUIState.Success(mars))
             } catch (e: Exception) {
-                _marsPhotosState.value = HomeUIState.Error(e)
+                _marsPhotosState.tryEmit(HomeUIState.Error(e))
             }
         }
     }
