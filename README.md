@@ -7,8 +7,6 @@ Space Explorer is an innovative mobile application that allows users to embark o
 - 🌟 Seamless integration of NASA API: Access the latest data and imagery provided by NASA's open API.
 - 🚀 Discover Astronomical Wonders: Explore stunning images, videos, and information about celestial bodies, galaxies, planets, and more.
 - 📷 Daily Astronomy Picture: Get a new captivating picture every day along with a detailed description.
-- 🔎 Search and Filter: Easily search for specific topics, missions, or objects of interest.
-- 🌟 Save Favorites: Bookmark your favorite images, videos, or articles for quick access later.
 - 🚀 Share with Friends: Share captivating discoveries with friends and family through various social media platforms.
 
 ## Tech Stack 💻
