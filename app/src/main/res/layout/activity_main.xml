@@ -20,6 +20,7 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:orientation="horizontal"
         app:itemIconTint="@color/selector_nav_icon_color"
         app:itemTextColor="@color/selector_nav_text_color"

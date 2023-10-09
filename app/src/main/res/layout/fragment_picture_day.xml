@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".feature.MainActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -20,9 +21,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:fontFamily="sans-serif-black"
                 android:gravity="center"
+                android:textColor="@color/white"
                 android:text="@string/picture_of_the_day"
+                android:textStyle="bold"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +36,8 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-black"
-                android:text=""
+                tools:text="testo de teste"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +71,7 @@
                 android:id="@+id/webView"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
+                android:layout_margin="18dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/mars"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -81,6 +84,7 @@
 
     <com.johnny.fagundes.spaceexplorer.feature.components.LoadingScreenView
         android:id="@+id/loadingScreen"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
