@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1026345658478",
+    "project_id": "space-news-f5f33",
+    "storage_bucket": "space-news-f5f33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026345658478:android:f0df3cfe259ec109709e7f",
+        "android_client_info": {
+          "package_name": "com.johnny.fagundes.spaceexplorer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHw5tebTVH65-28rzL9mAYpSqe0bBzgi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
