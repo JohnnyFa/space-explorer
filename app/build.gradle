@@ -3,11 +3,13 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id("com.google.gms.google-services")
+    id("com.google.firebase.appdistribution")
+
 }
 
 android {
     namespace 'com.johnny.fagundes.spaceexplorer'
-    compileSdk 33
+    compileSdk 34
 
     viewBinding {
         enabled = true
@@ -15,11 +17,14 @@ android {
     dataBinding {
         enabled = true
     }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
 
     defaultConfig {
         applicationId "com.johnny.fagundes.spaceexplorer"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -35,22 +40,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BASE_URL", "\"https://api.nasa.gov/\""
             buildConfigField "String", "API_KEY", "\"vrNxDsVDnElJt9P9E0xZTxMEUJcrTMmGocgOlDdv\""
+
+            firebaseAppDistribution {
+                appId="1:1026345658478:android:f0df3cfe259ec109709e7f"
+                artifactType = "APK"
+                releaseNotesFile = "app/releasenotes.txt"
+                groups = "testers"
+                serviceCredentialsFile="app/service-account-firebase.json"
+            }
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -66,11 +79,10 @@ dependencies {
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
-    kapt 'com.github.bumptech.glide:compiler:4.12.0'
 
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
 
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
     testImplementation "io.mockk:mockk-android:1.13.5"
     testImplementation "io.mockk:mockk-agent:1.13.5"
     testImplementation 'androidx.arch.core:core-testing:2.2.0'
@@ -79,8 +91,8 @@ dependencies {
     testImplementation "io.insert-koin:koin-test-junit4:3.4.0"
     testImplementation "io.insert-koin:koin-test-junit5:3.4.0"
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
 
     implementation 'com.jakewharton.timber:timber:5.0.1'
     implementation 'com.airbnb.android:lottie:4.1.0'
@@ -88,4 +100,7 @@ dependencies {
     //Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation 'com.google.firebase:firebase-perf:20.5.1'
+
+
 }
