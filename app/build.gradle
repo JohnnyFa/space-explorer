@@ -2,10 +2,14 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id("com.google.gms.google-services")
-    id("com.google.firebase.appdistribution")
-
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.appdistribution'
+    id 'com.github.triplet.play'
 }
+
+def keystorePropertiesFile = rootProject.file("app/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     namespace 'com.johnny.fagundes.spaceexplorer'
@@ -25,21 +29,34 @@ android {
         applicationId "com.johnny.fagundes.spaceexplorer"
         minSdk 26
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 6
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
     }
 
     buildTypes {
         debug {
             buildConfigField "String", "BASE_URL", "\"https://api.nasa.gov/\""
             buildConfigField "String", "API_KEY", "\"vrNxDsVDnElJt9P9E0xZTxMEUJcrTMmGocgOlDdv\""
+            manifestPlaceholders = [appName  : "Space Explorer - HML"]
         }
         release {
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "BASE_URL", "\"https://api.nasa.gov/\""
             buildConfigField "String", "API_KEY", "\"vrNxDsVDnElJt9P9E0xZTxMEUJcrTMmGocgOlDdv\""
+
+            signingConfig signingConfigs.release
 
             firebaseAppDistribution {
                 appId="1:1026345658478:android:f0df3cfe259ec109709e7f"
@@ -58,6 +75,9 @@ android {
         jvmTarget = '17'
     }
 }
+play {
+    serviceAccountCredentials.set(file("service-account-googleplay.json"))
+}
 
 dependencies {
 
@@ -68,6 +88,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 
     // Koin dependencies
     implementation "io.insert-koin:koin-core:3.4.0"
@@ -99,7 +120,7 @@ dependencies {
 
     //Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
-    implementation("com.google.firebase:firebase-analytics")
+    implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-perf:20.5.1'
 
 
