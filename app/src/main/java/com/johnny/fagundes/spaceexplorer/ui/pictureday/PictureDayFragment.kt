@@ -100,11 +100,12 @@ class PictureDayFragment : Fragment(), RetryCallback {
         ImageUtils.loadImage(
             requireContext(), picture, binding.imageView
         )
-        binding.videoView.isVisible = false
+        binding.webView.isVisible = false
     }
 
     private fun setVideoDay(video: String) {
-        binding.videoView.setVideoPath(video)
+        binding.webView.settings.javaScriptEnabled = true
+        binding.webView.loadUrl(video)
         binding.imageView.isVisible = false
     }
 

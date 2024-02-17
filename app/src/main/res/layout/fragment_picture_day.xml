@@ -68,8 +68,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewExplanation" />
 
-            <VideoView
-                android:id="@+id/videoView"
+            <WebView
+                android:id="@+id/webView"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_margin="18dp"
