@@ -27,8 +27,8 @@ class MarsRoverPhotosViewModel(private val nasaRepository: NasaRepository) : Vie
     }
 
     sealed class HomeUIState {
-        object Initial : HomeUIState()
-        object Loading : HomeUIState()
+        data object Initial : HomeUIState()
+        data object Loading : HomeUIState()
         data class Success(val marsPhotos: MarsRoverPhotosResponse) : HomeUIState()
         data class Error(val error: Throwable) : HomeUIState()
     }

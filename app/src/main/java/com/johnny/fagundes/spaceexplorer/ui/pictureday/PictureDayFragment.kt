@@ -59,7 +59,6 @@ class PictureDayFragment : Fragment(), RetryCallback {
                     }
 
                     is PictureDayViewModel.HomeUIState.Error -> {
-                        Timber.tag(TAG).d("data is not collected, ERROR.")
                         showError(state.error)
                         setupUI(false)
                     }
@@ -77,7 +76,8 @@ class PictureDayFragment : Fragment(), RetryCallback {
     }
 
     private fun showError(error: Throwable) {
-        println(error.message)
+        Timber.tag(TAG).d("data is not collected, ERROR: ${error.message}")
+
         val fragmentManager = childFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         val errorFragment = ErrorFragment()
@@ -100,12 +100,11 @@ class PictureDayFragment : Fragment(), RetryCallback {
         ImageUtils.loadImage(
             requireContext(), picture, binding.imageView
         )
-        binding.webView.isVisible = false
+        binding.videoView.isVisible = false
     }
 
     private fun setVideoDay(video: String) {
-        binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl(video)
+        binding.videoView.setVideoPath(video)
         binding.imageView.isVisible = false
     }
 

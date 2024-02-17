@@ -52,8 +52,8 @@ class PictureDayViewModel(
     }
 
     sealed class HomeUIState {
-        object Initial : HomeUIState()
-        object Loading : HomeUIState()
+        data object Initial : HomeUIState()
+        data object Loading : HomeUIState()
         data class Success(val picture: FactDayResponse) : HomeUIState()
         data class Error(val error: Throwable) : HomeUIState()
     }
