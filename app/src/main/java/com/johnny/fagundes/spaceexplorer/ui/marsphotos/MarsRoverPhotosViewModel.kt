@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.marsphotos
+package com.johnny.fagundes.spaceexplorer.ui.marsphotos
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

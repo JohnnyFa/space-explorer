@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.error
+package com.johnny.fagundes.spaceexplorer.ui.error
 
 import android.content.Context
 import android.os.Bundle

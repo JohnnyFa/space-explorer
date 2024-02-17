@@ -6,25 +6,25 @@
 
     <fragment
         android:id="@+id/pictureOfDayFragment"
-        android:name="com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.ui.pictureday.PictureDayFragment"
         android:label="Picture of the Day"
         tools:layout="@layout/fragment_picture_day" />
 
     <fragment
         android:id="@+id/marsFragment"
-        android:name="com.johnny.fagundes.spaceexplorer.feature.marsphotos.MarsRoverPhotosFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.ui.marsphotos.MarsRoverPhotosFragment"
         android:label="Mars"
         tools:layout="@layout/fragment_mars_rover_photos" />
 
     <fragment
         android:id="@+id/earthFragment"
-        android:name="com.johnny.fagundes.spaceexplorer.feature.earth.EarthFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.ui.earth.EarthFragment"
         android:label="Earth"
         tools:layout="@layout/fragment_earth" />
 
     <fragment
         android:id="@+id/asteroidsFragment"
-        android:name="com.johnny.fagundes.spaceexplorer.feature.asteroids.AsteroidsFragment"
+        android:name="com.johnny.fagundes.spaceexplorer.ui.asteroids.AsteroidsFragment"
         android:label="Asteroids"
         tools:layout="@layout/fragment_asteroids" />
 </navigation>

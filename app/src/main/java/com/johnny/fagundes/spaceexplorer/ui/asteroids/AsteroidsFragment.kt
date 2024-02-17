@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.earth
+package com.johnny.fagundes.spaceexplorer.ui.asteroids
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.johnny.fagundes.spaceexplorer.R
 
-class EarthFragment : Fragment() {
+class AsteroidsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_earth, container, false)
+        return inflater.inflate(R.layout.fragment_asteroids, container, false)
     }
+
 }

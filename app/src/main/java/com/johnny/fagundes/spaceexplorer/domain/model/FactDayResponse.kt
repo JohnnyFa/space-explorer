@@ -15,7 +15,7 @@ data class FactDayResponse(
         return pictureDate.isEqual(today)
     }
 
-    fun mediaType(): String{
+    fun mediaType(): String {
         return media_type
     }
 

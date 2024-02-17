@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.pictureday
+package com.johnny.fagundes.spaceexplorer.ui.pictureday
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.johnny.fagundes.spaceexplorer.domain.model.FactDayResponse

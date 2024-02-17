@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.marsphotos
+package com.johnny.fagundes.spaceexplorer.ui.marsphotos
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,9 +12,9 @@ import com.johnny.fagundes.spaceexplorer.R
 import com.johnny.fagundes.spaceexplorer.data.remote.RetryCallback
 import com.johnny.fagundes.spaceexplorer.databinding.FragmentMarsRoverPhotosBinding
 import com.johnny.fagundes.spaceexplorer.domain.model.MarsRoverPhoto
-import com.johnny.fagundes.spaceexplorer.feature.error.ErrorFragment
-import com.johnny.fagundes.spaceexplorer.feature.marsphotos.adapter.MarsPhotosAdapter
-import com.johnny.fagundes.spaceexplorer.feature.pictureday.PictureDayFragment
+import com.johnny.fagundes.spaceexplorer.ui.error.ErrorFragment
+import com.johnny.fagundes.spaceexplorer.ui.marsphotos.adapter.MarsPhotosAdapter
+import com.johnny.fagundes.spaceexplorer.ui.pictureday.PictureDayFragment
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

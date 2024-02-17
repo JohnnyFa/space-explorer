@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.pictureday
+package com.johnny.fagundes.spaceexplorer.ui.pictureday
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

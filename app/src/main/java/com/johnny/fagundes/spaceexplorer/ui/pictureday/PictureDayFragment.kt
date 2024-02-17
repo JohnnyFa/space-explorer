@@ -1,7 +1,5 @@
-package com.johnny.fagundes.spaceexplorer.feature.pictureday
+package com.johnny.fagundes.spaceexplorer.ui.pictureday
 
-import android.media.session.MediaController
-import android.net.Uri
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +11,7 @@ import com.johnny.fagundes.spaceexplorer.R
 import com.johnny.fagundes.spaceexplorer.data.remote.RetryCallback
 import com.johnny.fagundes.spaceexplorer.databinding.FragmentPictureDayBinding
 import com.johnny.fagundes.spaceexplorer.domain.model.FactDayResponse
-import com.johnny.fagundes.spaceexplorer.feature.error.ErrorFragment
+import com.johnny.fagundes.spaceexplorer.ui.error.ErrorFragment
 import com.johnny.fagundes.spaceexplorer.utils.ImageUtils
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch

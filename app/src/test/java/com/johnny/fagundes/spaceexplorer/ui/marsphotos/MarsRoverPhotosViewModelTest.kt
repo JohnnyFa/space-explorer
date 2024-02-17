@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.marsphotos
+package com.johnny.fagundes.spaceexplorer.ui.marsphotos
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.johnny.fagundes.spaceexplorer.data.repository.NasaRepository

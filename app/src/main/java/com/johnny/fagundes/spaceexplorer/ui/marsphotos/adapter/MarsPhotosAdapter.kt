@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.marsphotos.adapter
+package com.johnny.fagundes.spaceexplorer.ui.marsphotos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

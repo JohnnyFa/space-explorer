@@ -23,7 +23,7 @@
         android:theme="@style/Theme.SpaceExplorer"
         tools:targetApi="31">
         <activity
-            android:name=".feature.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

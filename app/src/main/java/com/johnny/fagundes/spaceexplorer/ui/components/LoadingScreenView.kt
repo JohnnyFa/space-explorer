@@ -1,4 +1,4 @@
-package com.johnny.fagundes.spaceexplorer.feature.components
+package com.johnny.fagundes.spaceexplorer.ui.components
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.FrameLayout
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieCompositionFactory
-import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.google.android.material.textview.MaterialTextView
 import com.johnny.fagundes.spaceexplorer.R
 

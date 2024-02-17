@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".feature.MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <com.johnny.fagundes.spaceexplorer.feature.components.LoadingScreenView
+    <com.johnny.fagundes.spaceexplorer.ui.components.LoadingScreenView
         android:id="@+id/loadingScreen"
         android:visibility="gone"
         android:layout_width="match_parent"
